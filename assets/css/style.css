@@ -22,7 +22,32 @@ h1, h2, h3, h4, h5, h6{
 }
 
 main{
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+}
+
+/* Navlist to display at bottom of screen */
+ul#navlist{
+    display: block;
+    margin: auto;
+    position: fixed;
+    bottom: 2rem;
+    left: 36%
+}
+ul#navlist li{
+    display: inline-block;
+    margin: 0.25rem;
+}
+#navlist li a{
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    border: 5px solid #F2F2F2;
+    background-color: transparent;
 }
 
 /* All section containers will be a flex */
