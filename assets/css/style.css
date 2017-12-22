@@ -127,6 +127,19 @@ footer span{
 /* Tablets and Larger */
 @media only screen and (min-width: 768px){
 
+    /* Navigation - Display to right */
+    ul#navlist{
+        top: 40vh;
+        right: 1rem;
+        bottom: initial;
+        left: initial;
+    }
+    ul#navlist li{
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    /* Landing Page */
     section#landing img{
         width: 50%;
     }
