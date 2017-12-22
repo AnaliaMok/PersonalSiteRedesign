@@ -28,9 +28,11 @@ section{
     justify-content: center;
 }
 
+/* Full-screen landing */
 section#landing{
     width: 100vw;
     height: 100vh;
+    padding: 1rem;
     background-color: #2B2B2B;
 }
 
@@ -42,16 +44,15 @@ section#landing img{
 
 /* Container for "columns" */
 section#landing > div{
-    /* display: table; */
+    display: inline-block;
+    max-width: 95vw;
     position: absolute;
     z-index: 10;
     white-space: nowrap;
     color: #F2F2F2;
     font-size: 1rem;
 }
-
 section#landing div div{
-    /* display: table-column; */
     display: inline-block;
     padding: 2rem 1rem;
     vertical-align: middle;
@@ -60,14 +61,15 @@ section#landing div div{
 section#landing div div:first-child{
     border-right: 3px solid #F2F2F2;
 }
-
 section#landing p{
     /* display: table-cell; */
     color: #F2F2F2;
+    font-family: 'Lato', sans-serif;
 }
 div#second-col p{
     font-size: 1rem;
     font-weight: 400;
+    font-family: 'Source Sans Pro', sans-serif;
     color: #18B1F9;
 }
 div#second-col p:first-child{
@@ -76,6 +78,17 @@ div#second-col p:first-child{
     font-family: 'Lato', sans-serif;
     color: #F2F2F2;
 }
+
+footer{
+    padding: 0.5rem;
+    text-align: center;
+    background-color: #333;
+}
+footer span{
+    color: #F2F2F2;
+    font-family: 'Lato', sans-serif;
+}
+
 
 /* Phone Orientation - Landscape */
 @media only screen
@@ -87,4 +100,15 @@ div#second-col p:first-child{
 /* Tablets and Larger */
 @media only screen and (min-width: 768px){
 
+    section#landing img{
+        width: 50%;
+    }
+
+} /* End of Tablets and Larger */
+
+/* Desktop Screen */
+@media only screen and (min-width: 1024px){
+    section#landing img{
+        width: 30%;
+    }
 } /* End of Tablets and Larger */
