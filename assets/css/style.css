@@ -207,6 +207,69 @@ div#circle{
     text-align: center;
 }
 
+/* Projects Section */
+section#project{
+    padding: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #FAFAFA;
+}
+section#project > div{
+    display: -webkit-flex;
+    display: flex;
+    /* TODO: Change to columns for tablets and desktop */
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-items: center;
+
+    width: 80%;
+    margin: 0.5rem 0;
+}
+section#project > div div{
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 10rem;;
+    margin: 0 0.5rem;
+    /* Individual Project Items */
+    flex: 1;
+
+    background-color: #E0E0E0;
+    text-align: center;
+
+    cursor: pointer;
+}
+section#project span{
+    font-size: 1.25rem;
+    font-family: 'Lato', sans-serif;
+    color: #111;
+}
+
+/* Contacts Section */
+section#contact{
+    flex-direction: column;
+    padding: 2rem 1rem;
+    background-color: #2B2B2B;
+    text-align: center;
+}
+#contact p{
+    margin-bottom: 1rem;
+    font-weight: 300;
+    font-size: 1.75rem;
+    color: #F2F2F2;
+}
+#contact span{
+    margin: 0 1rem;
+    font-size: 3rem;
+    color: #E0E0E0;
+}
+
+
 footer{
     padding: 0.5rem;
     text-align: center;
@@ -319,6 +382,10 @@ footer span{
         font-size: 1.1rem;
     }
 
+    /* Projects Section */
+    section#project{
+        height: 100vh;
+    }
 
 } /* End of Tablets and Larger */
 
