@@ -26,6 +26,10 @@ h1, h2, h3, h4, h5, h6{
 /* Global Classes to Apply Proper background colors */
 .blue{ background-color: #18B1F9; }
 .white{ background-color: #F2F2F2; }
+.white-text{
+    font-weight: 700;
+    color: #F2F2F2;
+}
 
 main{
     display: -webkit-flex;
@@ -144,6 +148,34 @@ section#about .left-col{
     text-align: center;
 }
 
+section#skills .left-col h2{
+    font-size: 3rem;
+    color: #2D9CDB;
+}
+section#skills .left-col h3{
+    margin: 2rem 0 0.5rem 0;
+    font-size: 1.5rem;
+    color: #2D9CDB;
+}
+section#skills .left-col p{
+    margin-top: 0;
+    color: #2D9CDB;
+}
+section#skills .right-col{
+    font-size: 1.25rem;
+    text-align: center;
+}
+section#skills .right-col h3{
+    font-size: 1.75rem;
+}
+section#skills .right-col ul{
+    display: block;
+    margin: 0.5rem 0 1rem 0;
+    list-style: none;
+    padding: 0;
+}
+
+/* Left and right columns */
 .columns > div{
     display: -webkit-flex;
     display: -moz-flex;
@@ -167,7 +199,6 @@ section#about .left-col{
 .columns h2{
     text-align: center;
 }
-
 
 footer{
     padding: 0.5rem;
@@ -226,6 +257,9 @@ footer span{
         height: 100vh;
         /* flex-grow: 1; */
     }
+    .columns p{
+        font-size: 1rem;
+    }
     section#about .left-col{
         flex-grow: 1;
         order: 0;
@@ -240,6 +274,40 @@ footer span{
         text-align: left;
     }
 
+    /* Skills right column inner columns */
+    section#skills .right-col{
+        text-align: left;
+        font-size: 1.1rem;
+    }
+    section#skills div.right-col div:first-child{
+        display: -webkit-flex;
+        display: flex;
+
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    sectioN#skills div.right-col div{
+        width: 90%;;
+    }
+    section#skills .right-col div:first-child div{
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+
+        /* width: 50%; */
+        flex: 1;
+
+        text-align: left;
+    }
+    section#skills .right-col div:first-child div h3{
+        display: block;
+        margin: 0;
+        font-size: 1.5rem;
+        color: #111;
+    }
+    section#skills p{
+        font-size: 1.1rem;
+    }
 
 } /* End of Tablets and Larger */
 
