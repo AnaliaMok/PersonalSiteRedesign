@@ -18,14 +18,20 @@ html, body{
 }
 
 h1, h2, h3, h4, h5, h6{
+    margin-bottom: 1rem;
     font-family: 'Lato', sans-serif;
+    color: #111;
 }
 
+/* Global Classes to Apply Proper background colors */
+.blue{ background-color: #18B1F9; }
+.white{ background-color: #F2F2F2; }
+
 main{
-    display: flex;
     display: -webkit-flex;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -46,16 +52,32 @@ ul#navlist li{
     width: 25px;
     height: 25px;
     border-radius: 100%;
-    border: 5px solid #F2F2F2;
+    border: 3px solid #F2F2F2;
     background-color: transparent;
+}
+#navlist li:first-child a{
+    /* First nav item is */
+    background-color: #F2F2F2;
 }
 
 /* All section containers will be a flex */
 section{
-    display: flex;
     display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+
+    /* Grow for outermost flexbox defined by main */
+    flex: 1;
+}
+
+/* About and skills sections are displayed in columns */
+.columns{
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 /* Full-screen landing */
@@ -95,16 +117,57 @@ section#landing p{
 }
 div#second-col p{
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 300;
     font-family: 'Source Sans Pro', sans-serif;
     color: #18B1F9;
 }
 div#second-col p:first-child{
     font-size: 3rem;
-    font-weight: bolder;
+    font-weight: 700;
     font-family: 'Lato', sans-serif;
     color: #F2F2F2;
 }
+
+/* About and Skills sections */
+section#about .left-col{
+    /* Order of columns with respect to outer section */
+    order: 2;
+    text-align: center;
+}
+.left-col img{
+    display: inline-block;
+    width: 50%;
+}
+.left-col p{
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.columns > div{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+    padding: 2.5rem;
+
+    /* Add extra padding on bottom for navbar */
+    padding-bottom: 3rem;
+}
+.columns div div:first-child{
+    margin-bottom: 2rem;
+}
+.columns h2{
+    text-align: center;
+}
+
 
 footer{
     padding: 0.5rem;
@@ -136,7 +199,7 @@ footer span{
     }
     ul#navlist li{
         display: block;
-        margin: 0.5rem 0;
+        margin: 0.75rem 0;
     }
 
     /* Landing Page */
@@ -152,6 +215,31 @@ footer span{
     div#second-col p:first-child{
         font-size: 4rem;
     }
+
+    /* About and Skills Section */
+    .columns{
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .columns > div{
+        /* width: 50%; */
+        height: 100vh;
+        /* flex-grow: 1; */
+    }
+    section#about .left-col{
+        flex-grow: 1;
+        order: 0;
+    }
+    section#about .right-col{
+        flex-grow: 2;
+    }
+    .left-col img{
+        width: 55%;
+    }
+    .columns h2{
+        text-align: left;
+    }
+
 
 } /* End of Tablets and Larger */
 
@@ -169,4 +257,10 @@ footer span{
     div#second-col p:first-child{
         font-size: 4.5rem;
     }
+
+    /* About and Skills Section */
+    .left-col img{
+        width: 40%;
+    }
+
 } /* End of Tablets and Larger */
