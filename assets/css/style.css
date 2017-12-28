@@ -287,9 +287,9 @@ section#project span{
 
     background-color: rgba(0, 0, 0, 0.16);
 }
-.card-container > div#grader-app::before{
+/* .card-container > div#grader-app::before{
     background-color: rgba(46, 204, 113, 0.5);
-}
+} */
 .card-container > div#clock-app::before{
     background-color: rgba(41, 128, 185, 0.5);
 }
@@ -300,14 +300,14 @@ section#project span{
 
 /* Project Item Backgrounds */
 #grader-app{
-    background: url("../images/grader_logo.png");
+    background: url("../images/grader-app.png");
     background-repeat: no-repeat;
     background-position: center;
 
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 #clock-app{
     background: url("../images/clock.png");
@@ -323,6 +323,16 @@ section#project span{
     background: url("../images/collegesearch_thumb.PNG");
     background-repeat: no-repeat;
     background-position: 50% 0%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#terminal{
+    background: url("../images/terminal-app.png");
+    background-repeat: no-repeat;
+    background-position: center;
 
     -webkit-background-size: cover;
     -moz-background-size: cover;
