@@ -24,7 +24,12 @@ h1, h2, h3, h4, h5, h6{
 }
 
 /* Global Classes to Apply Proper background colors */
+.blue-lighten{ background-color: #56CCF2; }
 .blue{ background-color: #18B1F9; }
+.blue-darken-1{ background-color: #2D9CDB; }
+.blue-darken-2{ background-color: #169FDF; }
+.royal-blue{ background-color: #2F80ED; }
+
 .white{ background-color: #F2F2F2; }
 .white-text{
     font-weight: 400;
@@ -121,7 +126,7 @@ section#landing p{
 }
 div#second-col p{
     font-size: 1rem;
-    font-weight: 300;
+    font-weight: 400;
     font-family: 'Source Sans Pro', sans-serif;
     color: #18B1F9;
 }
@@ -241,7 +246,6 @@ section#project > div{
     /* Individual Project Items */
     flex: 1;
 
-    background-color: #E0E0E0;
     text-align: center;
 
     cursor: pointer;
@@ -251,14 +255,19 @@ section#project > div{
 section#project span{
     font-size: 1.25rem;
     font-family: 'Lato', sans-serif;
-    color: #FAFAFA;
+    color: #333;
 }
 
 /* Card Properties */
 #project > div div.card-container{
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0.5rem;
+
+    -webkit-transition: transform 0.75s;
+    -moz-transition: transform 0.75s;
+    -o-transition: transform 0.75s;
+    transition: transform 0.75s;
 }
 .card-container > div{
     width: 100%;
@@ -270,76 +279,14 @@ section#project span{
     -o-transition: transform 0.75s;
     transition: transform 0.75s;
 }
-.card-container:hover > div{
-    -webkit-transform: scale(1.25);
-    transform: scale(1.25);
+.card-container:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
-.card-container > div::before{
-    /* Image Overlay */
-    content: "";
-    display: block;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-
-    background-color: rgba(0, 0, 0, 0.16);
-}
-/* .card-container > div#grader-app::before{
-    background-color: rgba(46, 204, 113, 0.5);
-} */
-.card-container > div#clock-app::before{
-    background-color: rgba(41, 128, 185, 0.5);
-}
-.card-container > div span{
+/* .card-container > div span{
     position: absolute;
     z-index: 5;
-}
-
-/* Project Item Backgrounds */
-#grader-app{
-    background: url("../images/grader-app.png");
-    background-repeat: no-repeat;
-    background-position: center;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-#clock-app{
-    background: url("../images/clock.png");
-    background-repeat: no-repeat;
-    background-position: center;
-
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    background-size: contain;
-}
-#college-search{
-    background: url("../images/collegesearch_thumb.PNG");
-    background-repeat: no-repeat;
-    background-position: 50% 0%;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-#terminal{
-    background: url("../images/terminal-app.png");
-    background-repeat: no-repeat;
-    background-position: center;
-
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-
+} */
 
 /* Contacts Section */
 section#contact{
