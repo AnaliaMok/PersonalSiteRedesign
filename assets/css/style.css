@@ -199,7 +199,7 @@ div#circle{
     align-items: center;
 
     width: 100%;
-    height: 100%;
+    min-height: 100%;
     padding: 2.5rem;
 
     /* Add extra padding on bottom for navbar */
@@ -214,18 +214,22 @@ div#circle{
 
 /* Projects Section */
 section#project{
-    padding: 1.5rem;
+    /* padding: 1.5rem; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
     background-color: #FAFAFA;
+    /* overflow: auto; */
 }
 section#project > div{
     display: -webkit-flex;
     display: flex;
+    margin: 1.5rem;
 
     flex-direction: column;
     flex-wrap: wrap;
+    flex-shrink: 0;
 
     justify-content: space-between;
     align-items: center;
@@ -362,7 +366,7 @@ footer span{
         flex-wrap: nowrap;
     }
     .columns > div{
-        /* width: 50%; */
+        width: 50%;
         height: 100vh;
         /* flex-grow: 1; */
     }
@@ -374,7 +378,13 @@ footer span{
         order: 0;
     }
     section#about .right-col{
-        flex-grow: 2;
+        justify-content: flex-start;
+        flex-grow: 1;
+        padding: 0;
+        overflow: auto;
+    }
+    section#about .right-col div{
+        margin: 2.5rem;
     }
     .left-col img{
         width: 55%;
@@ -427,10 +437,14 @@ footer span{
 
     /* Projects Section */
     section#project{
-        height: 100vh;
+        min-height: 100vh;
+        padding: 2.5rem;
+        justify-content: flex-start;
+        overflow: auto;
     }
     section#project > div{
         margin: 0.5rem 0;
+        height: 30.33%;
         flex-direction: row;
     }
     section#project > div div{
@@ -462,6 +476,9 @@ footer span{
     /* About and Skills Section */
     .left-col img{
         width: 40%;
+    }
+    section#about .right-col{
+        justify-content: center;
     }
 
     /* Contact Section */
